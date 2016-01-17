@@ -48,6 +48,7 @@
     <Compile Include="EventsArgs\DateTimeEventArgs.cs" />
     <Compile Include="EventsArgs\IntEventArgs.cs" />
     <Compile Include="EventsArgs\IPEndPointEventArgs.cs" />
+    <Compile Include="EventsArgs\StringEventArgs.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\DependencyObjectExtensions.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
