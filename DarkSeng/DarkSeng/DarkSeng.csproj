@@ -49,6 +49,7 @@
     <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\MouseButtonEventArgsExtention.cs" />
     <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\UIExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
