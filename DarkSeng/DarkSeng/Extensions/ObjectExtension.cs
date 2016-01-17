@@ -13,7 +13,7 @@ namespace DarkSeng.Extensions
         /// This method will get the name of a property. Can be used for INotifyPropertyChanged
         /// </summary>
         /// <typeparam name="TClass">The class of the Property</typeparam>
-        /// <param name="propertyLambda">The Property Lambda expression</param>
+        /// <param name="propertyLambda">The Property Lambda expression. Bsp x => x.Name</param>
         /// <returns>The Name of the Property as a string</returns>
         /// <exception cref="ArgumentNullException">This gets thrown if the Lambda expression contains anything but a Property</exception>
         public static string GetPropertyName<TClass>(this object obj, Expression<Func<TClass, object>> propertyLambda)
