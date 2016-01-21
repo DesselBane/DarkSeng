@@ -4,9 +4,19 @@ namespace DarkSeng.EventsArgs
 {
     public class DateTimeEventArgs : EventArgs
     {
+        #region Vars
+
+        DateTime _date;
+
+        #endregion Vars
+
         #region Properties
 
-        public DateTime Date { get; private set; }
+        public DateTime Date
+        {
+            get { return _date; }
+            private set { _date = value; }
+        }
 
         #endregion Properties
 
@@ -16,7 +26,7 @@ namespace DarkSeng.EventsArgs
         {
             Date = date;
         }
-        
+
         #endregion Constructors 
     }
 }
