@@ -49,7 +49,7 @@
     <Compile Include="Compression\Zip.cs" />
     <Compile Include="Cryptography\Xor.cs" />
     <Compile Include="Custom\EnumHelper.cs" />
-    <Compile Include="Custom\GenericEventArgs.cs" />
+    <Compile Include="EventsArgs\GenericEventArgs.cs" />
     <Compile Include="Custom\GenericEventHandler.cs" />
     <Compile Include="Custom\PropertyChangedNotifier.cs" />
     <Compile Include="EventsArgs\BoolEventArgs.cs" />
