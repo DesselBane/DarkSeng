@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkSeng", "DarkSeng\DarkSeng.csproj", "{0DC69564-7333-4A60-B366-4E15FC891ABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkSengUnitTests", "DarkSengUnitTests\DarkSengUnitTests.csproj", "{A4DBA884-6E83-4B50-817E-CCC67DC4B2F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0DC69564-7333-4A60-B366-4E15FC891ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DC69564-7333-4A60-B366-4E15FC891ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DC69564-7333-4A60-B366-4E15FC891ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4DBA884-6E83-4B50-817E-CCC67DC4B2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4DBA884-6E83-4B50-817E-CCC67DC4B2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4DBA884-6E83-4B50-817E-CCC67DC4B2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4DBA884-6E83-4B50-817E-CCC67DC4B2F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
