@@ -48,11 +48,13 @@
   <ItemGroup>
     <Compile Include="Compression\GZip.cs" />
     <Compile Include="Compression\Zip.cs" />
+    <Compile Include="Convert\Extensions.cs" />
     <Compile Include="Cryptography\Xor.cs" />
     <Compile Include="Custom\EnumHelper.cs" />
-    <Compile Include="Custom\GenericEventArgs.cs" />
+    <Compile Include="EventsArgs\GenericEventArgs.cs" />
     <Compile Include="Custom\GenericEventHandler.cs" />
     <Compile Include="Custom\PropertyChangedNotifier.cs" />
+    <Compile Include="Custom\TypeSwitch.cs" />
     <Compile Include="EventsArgs\BoolEventArgs.cs" />
     <Compile Include="EventsArgs\DateTimeEventArgs.cs" />
     <Compile Include="EventsArgs\IntEventArgs.cs" />

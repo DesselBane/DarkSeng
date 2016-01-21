@@ -55,7 +55,7 @@ namespace DarkSeng.Mathematics
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        static public int NumberOfDivisors(int number)
+        static public int GetNumberOfDivisors(this int number)
         {
             int nod = 0;
             int sqrt = (int)Math.Sqrt(number);
