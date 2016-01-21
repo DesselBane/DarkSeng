@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Compression\GZip.cs" />
     <Compile Include="Compression\Zip.cs" />
+    <Compile Include="Convert\Extensions.cs" />
     <Compile Include="Cryptography\Xor.cs" />
     <Compile Include="Custom\EnumHelper.cs" />
     <Compile Include="Custom\GenericEventArgs.cs" />
