@@ -52,6 +52,7 @@
     <Compile Include="Custom\GenericEventArgs.cs" />
     <Compile Include="Custom\GenericEventHandler.cs" />
     <Compile Include="Custom\PropertyChangedNotifier.cs" />
+    <Compile Include="Custom\TypeSwitch.cs" />
     <Compile Include="EventsArgs\BoolEventArgs.cs" />
     <Compile Include="EventsArgs\DateTimeEventArgs.cs" />
     <Compile Include="EventsArgs\IntEventArgs.cs" />
