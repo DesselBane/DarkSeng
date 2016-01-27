@@ -62,6 +62,7 @@
     <Compile Include="EventsArgs\StringEventArgs.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\DependencyObjectExtensions.cs" />
+    <Compile Include="Extensions\IComparableExtentions.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\MouseButtonEventArgsExtention.cs" />
     <Compile Include="Extensions\ObjectExtension.cs" />
