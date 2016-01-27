@@ -1,0 +1,18 @@
+Requirements Styler
+
+1. Get Default Styles
+Upon application the dev should be able to initialize the styles and set them for the current application.
+
+
+2. Configure Styles
+The user of the application should be able to modify style settings during runtime.
+
+
+3. Save Styles
+the user should be able to save the current style configuration in a file. 
+
+4. Export Styles
+the user should be able to export any saved style configuration.
+
+5. Import Styles
+the user should be able to import any style configuration.
