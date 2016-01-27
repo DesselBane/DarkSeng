@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0541f178-e76d-4b17-99ab-11b879eba11d" name="StyleController" linkedPackageId="dfe820ce-7dd0-476e-8cab-10dbea60e128" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="99feb0c7-feea-4798-a202-175949173ec5">
+      <elementDefinition Id="eb690cf8-9e50-43f1-9246-8c9b0df4eb79" />
+      <body>Describes the GetStyles() method</body>
+    </comment>
+    <comment Id="d6a16634-d40f-45be-a26f-9d83a4b9f6af">
+      <elementDefinition Id="9bce6bce-7f43-443f-98e7-2d015c7a69bf" />
+      <body>Describes the Save StyleConfig Method</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="6b3f6f6f-6871-4ffd-8b88-949735e3a82b">
+      <profileInstance Id="097c499d-b2db-4987-9c3a-db2def269cc0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="592d9968-8de9-4a45-9066-c314e7b55d2b">
+      <profileInstance Id="cb3bf97c-2a3a-4814-aea6-32a33cfb4b35" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="b6a69c97-40f3-4792-9cba-7175d6a82368" name="StyleController" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="f53fe8b9-c9af-474b-bd24-7cfc7cfb4acf" />
+        <nodes>
+          <opaqueAction Id="a6469436-f79a-445f-96e6-926b7551958d" name="Get Styles()" isLeaf="false">
+            <elementDefinition Id="7442eb8c-2759-412a-894e-a7495d443b9b" />
+            <flowNodeTargets>
+              <controlFlow Id="757d66b0-0f53-451c-894b-9c9214838aa5" isLeaf="false">
+                <opaqueActionMoniker Id="d54735d5-a3db-4120-9ad8-69f622cca2b6" LastKnownName="Look up saved style" />
+                <elementDefinition Id="bd380ae3-75bf-4e99-a131-29b5b92fb529" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d54735d5-a3db-4120-9ad8-69f622cca2b6" name="Look up saved style" isLeaf="false">
+            <elementDefinition Id="df39e114-d6fb-4619-ba52-690d6a2b43b9" />
+            <flowNodeTargets>
+              <controlFlow Id="9f686362-6829-4f26-9dca-700f6d91493e" guard="Saved style available" isLeaf="false">
+                <decisionNodeMoniker Id="21cf73cd-5529-4db4-8d20-91cc6e2b4f0b" LastKnownName="Decision1" />
+                <elementDefinition Id="b4304c48-2774-445f-927e-ff105d96ed86" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="97b61530-b7ab-45d9-afb0-b0cdb5856f98" name="Load Saved Style" isLeaf="false">
+            <elementDefinition Id="91795207-0396-4e7a-b68c-c2ae19266067" />
+            <flowNodeTargets>
+              <controlFlow Id="94ef46a3-2c09-40b4-bd57-45fe46df1d54" isLeaf="false">
+                <opaqueActionMoniker Id="31ecb83c-f219-4a01-ada6-4cf07875b8dc" LastKnownName="Return Style" />
+                <elementDefinition Id="0f6cf897-8909-45bf-a4e9-7f3705cf0171" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="6835d300-1807-42ef-a452-28055f4882ee" name="Create default Style" isLeaf="false">
+            <elementDefinition Id="c44f416f-b3dd-4844-99a3-ce5395062d39" />
+            <flowNodeTargets>
+              <controlFlow Id="1f4299d7-2c6d-4f59-bd8c-d980b4966c7b" isLeaf="false">
+                <opaqueActionMoniker Id="31ecb83c-f219-4a01-ada6-4cf07875b8dc" LastKnownName="Return Style" />
+                <elementDefinition Id="8725cf5b-ddcd-4724-b7ec-213d3bb37a21" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="21cf73cd-5529-4db4-8d20-91cc6e2b4f0b" name="Decision1" isLeaf="false">
+            <elementDefinition Id="e537a187-8770-49d0-a841-4a5f502c08aa" />
+            <flowNodeTargets>
+              <controlFlow Id="0793c56e-769c-4457-8b3a-e441176df730" guard="Yes" isLeaf="false">
+                <opaqueActionMoniker Id="97b61530-b7ab-45d9-afb0-b0cdb5856f98" LastKnownName="Load Saved Style" />
+                <elementDefinition Id="b747e154-9fbb-43d4-bdeb-e49af44f10cf" />
+              </controlFlow>
+              <controlFlow Id="40da3155-800c-42df-b1f1-a12d2bbcd777" guard="No" isLeaf="false">
+                <opaqueActionMoniker Id="6835d300-1807-42ef-a452-28055f4882ee" LastKnownName="Create default Style" />
+                <elementDefinition Id="45c8fcc8-3416-415f-a5d7-3005e4fbf24b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="31ecb83c-f219-4a01-ada6-4cf07875b8dc" name="Return Style" isLeaf="false">
+            <elementDefinition Id="6e4ee4f2-5166-40c2-8c91-ffa76aa0534e" />
+            <flowNodeTargets>
+              <controlFlow Id="9d0f7214-cb92-4110-a9db-b835f5d10a8d" isLeaf="false">
+                <activityFinalNodeMoniker Id="82d8cac1-d14e-4263-bd7c-aa7822415959" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="d61d0251-acc1-44a7-8667-f17ed92ea3f1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="bab900ea-dc57-4b50-9093-9aef6cc0eee9" name="Save StyleConfig" isLeaf="false">
+            <elementDefinition Id="e8819d9b-b4c7-41de-8bcb-d9b476fb5eda" />
+            <flowNodeTargets>
+              <controlFlow Id="0008921e-4dd9-4ca0-902d-bc6242b2493d" isLeaf="false">
+                <opaqueActionMoniker Id="0bd01818-6a34-4089-9f2e-f07f8293c955" LastKnownName="Check if name is available" />
+                <elementDefinition Id="c0ffd246-53cd-4f7d-bf24-9ea2d700e6e7" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="5413476a-b4a2-44ca-9008-9c26535dd094" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="984324ea-4daa-4cba-a683-6151316488e1" />
+                  <upperBound>
+                    <literalInteger Id="33ec2b9b-4811-4f1b-b987-1fb532725aac" name="2147483647" value="2147483647">
+                      <elementDefinition Id="488e7c00-4f79-4ff6-812d-4471c011b5d0" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="3fcaa1f5-d6e8-472e-96c2-e06f865c6c33" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="1d519fa8-9e72-46ab-aea9-e7cbc99122a5" />
+                  <upperBound>
+                    <literalInteger Id="29d81233-51fa-4e71-a11d-0550c4348d6b" name="2147483647" value="2147483647">
+                      <elementDefinition Id="89c24714-5f57-4777-b80b-b589b9341e77" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="0bd01818-6a34-4089-9f2e-f07f8293c955" name="Check if name is available" isLeaf="false">
+            <elementDefinition Id="cd10369e-22eb-4013-89b7-c8f5a57f4392" />
+            <flowNodeTargets>
+              <controlFlow Id="b99b5673-2bf1-4036-8bde-e2d9a684ae7f" isLeaf="false">
+                <opaqueActionMoniker Id="99175c97-cd2f-48dc-978d-2163be521516" LastKnownName="Write StyleConfig into file" />
+                <elementDefinition Id="d1ac60c2-32b3-40aa-93aa-d7b255c7ba06" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="99175c97-cd2f-48dc-978d-2163be521516" name="Write StyleConfig into file" isLeaf="false">
+            <elementDefinition Id="3ad50644-9b04-4bda-b4fa-6dc9888cadd1" />
+            <flowNodeTargets>
+              <controlFlow Id="9e010a6b-5723-4184-946e-d160cb6b7003" isLeaf="false">
+                <opaqueActionMoniker Id="af65220d-cead-4012-9f9b-cfe566d976cc" LastKnownName="Determin Save Location" />
+                <elementDefinition Id="65b0341f-6f49-4296-bb88-cd1c96b94314" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="af65220d-cead-4012-9f9b-cfe566d976cc" name="Determin Save Location" isLeaf="false">
+            <elementDefinition Id="5fff7bde-19ad-4567-9c7d-e6721ac3f736" />
+            <flowNodeTargets>
+              <controlFlow Id="c0c912d6-d250-46f8-a17d-d8c7211bc445" isLeaf="false">
+                <opaqueActionMoniker Id="6673e3bc-b490-4cfc-9d14-2d2219205536" LastKnownName="Save the file" />
+                <elementDefinition Id="84d3e0b1-16e8-4d43-95f5-96b5d2b7fb08" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="6673e3bc-b490-4cfc-9d14-2d2219205536" name="Save the file" isLeaf="false">
+            <elementDefinition Id="a0a88d37-6b04-46ed-8365-830a6ec5af02" />
+            <flowNodeTargets>
+              <controlFlow Id="fffc6f52-8292-4387-a28d-9cb4c7d7dcaf" isLeaf="false">
+                <activityFinalNodeMoniker Id="7e5d4f66-27d9-4648-abc5-d0879955c7da" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="47a03356-6df7-4bb1-bdc1-7577dfc23809" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode Id="9fc4eecc-8199-4922-a023-c547be4e0ecf" name="Initial1" isLeaf="false">
+            <elementDefinition Id="87c3b353-78f5-489f-82e3-c16faed83fdc" />
+            <flowNodeTargets>
+              <controlFlow Id="eb8d8ab5-5080-4430-8655-bfaff379aeb4" isLeaf="false">
+                <opaqueActionMoniker Id="a6469436-f79a-445f-96e6-926b7551958d" LastKnownName="Get Styles()" />
+                <elementDefinition Id="7e2d9aad-8cfc-46da-87be-afb095c8552a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="82d8cac1-d14e-4263-bd7c-aa7822415959" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="decfc10c-7493-45b4-8078-5f31ebec49b1" />
+          </activityFinalNode>
+          <initialNode Id="bbba3509-3057-4320-bf7f-030298dc809e" name="Initial2" isLeaf="false">
+            <elementDefinition Id="40001e6a-411f-4ab6-ad4c-2ef3e735ef42" />
+            <flowNodeTargets>
+              <controlFlow Id="8c7e4315-bde9-4fc7-9a8a-ee10e2379b7f" isLeaf="false">
+                <opaqueActionMoniker Id="bab900ea-dc57-4b50-9093-9aef6cc0eee9" LastKnownName="Save StyleConfig" />
+                <elementDefinition Id="b3eef0c8-7583-4633-a477-3ea4aaf66169" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="7e5d4f66-27d9-4648-abc5-d0879955c7da" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="9e754b0e-4383-4c5c-b98c-2145b7a0f088" />
+          </activityFinalNode>
+          <objectNode Id="7cd42718-0860-41f0-b639-b0dde9914a05" name="Style Config to be saved" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="1c16a7d7-13a5-4e09-b540-efa51bdb33c1" />
+            <objectFlowTargets>
+              <objectFlow Id="1b9cb697-b167-4da7-9ef7-068d7030a2ee" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="5413476a-b4a2-44ca-9008-9c26535dd094" />
+                <elementDefinition Id="dbda0608-0089-4336-bfdf-d00fb26d2cbf" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="c33b20af-fbb4-4da2-90c5-d9ce9bb58186" name="2147483647" value="2147483647">
+                <elementDefinition Id="83420df5-eb5b-4ae4-bc8f-0d9be54dd312" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="56c77cbf-83e3-4190-94af-257613497a45" name="Save Path" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3164efcd-e58d-4b9c-bde3-6a2760ec7753" />
+            <objectFlowTargets>
+              <objectFlow Id="5b3cff3c-18e4-4dd0-bef4-1317af978cbd" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="3fcaa1f5-d6e8-472e-96c2-e06f865c6c33" />
+                <elementDefinition Id="15d028da-3849-48b6-b5f8-5f935ea968d2" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="1dcfdc27-ec22-42cf-b417-d9242a2385ca" name="2147483647" value="2147483647">
+                <elementDefinition Id="465e6992-bc60-4c79-be17-422211e4a00d" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="dfe820ce-7dd0-476e-8cab-10dbea60e128" name="DarkSengModeling">
+    <elementDefinition Id="58f57591-5628-4b18-9c30-b4dbf927ef03" />
+  </package>
+</activityRootModel>

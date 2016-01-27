@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="9d34f038-9283-4731-a525-520f7acc8e65" name="StyleController" linkedPackageId="dfd1bfa0-2bf6-47b2-87e0-d996b8dc666e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b8432e97-d7c8-4563-82a2-e063d4c7777e">
+      <profileInstance Id="5bc38571-9a9f-4f38-8f3a-8f2c87561244" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="25fe7176-d39e-41ca-bbf6-97ddabbbbba3">
+      <profileInstance Id="385523d1-d205-4450-8ee3-dbd549e0e4e4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="15541eac-e627-442c-b41b-c87f3153f9bf" name="StyleController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a652f8cc-12dd-40c9-9dd6-7b7871548c2c" />
+        <ownedAttributesInternal>
+          <property Id="670a5858-b620-46e8-b028-cf69e0721851" name="OptionsViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="063fbea8-91ae-4711-aa8f-57089cccc8a9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cacf8301-aad0-4313-b7da-e5902bc5bb8d" LastKnownName="object" />
+            </type_NamedElement>
+          </property>
+          <property Id="1e1d18ef-5823-4221-bc67-968b59b6e243" name="Current StyleConfig" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="17bb0a35-5559-4fc9-854a-54f584b1bedf" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ddf0068b-9d88-4b5f-bd4d-d18d93c4eb62" LastKnownName="StyleConfiguration" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f858e106-12f9-4488-8431-897cab05bdf2" name="GetStyles" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="835ed684-453d-49c6-a1ad-f490776f5cde" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5ff72c49-3b54-47f2-91d6-3d24a243ba12" direction="Return" isUnique="false">
+                  <elementDefinition Id="dc196915-fdd9-4e37-89a7-294514554817" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92696043-5a5f-4228-bbb1-f259e332b564" LastKnownName="ResourceDictionary" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2fc8f518-3ba5-4b81-bd48-16f5cf1fb0a7" name="LoadStyles" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d4f8054f-09a3-4d66-bdec-85db15033272" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e54067f6-4942-4916-87fc-2f6d395fd771" direction="Return" isUnique="false">
+                  <elementDefinition Id="f2ea65bf-c701-42c4-9cfe-f0fd0129f735" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92696043-5a5f-4228-bbb1-f259e332b564" LastKnownName="ResourceDictionary" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a9a6af37-93f2-4716-9cca-7c81461d3e46" name="SaveStyleConfig" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed332ce9-9d1d-4f98-9561-925e6506341d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3934900f-8c58-45ff-879c-9cf5d23ccf11" name="StyleConfiguration config" direction="In" isUnique="false">
+                  <elementDefinition Id="31935573-c5cf-49b8-8375-4058ded15c64" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="92696043-5a5f-4228-bbb1-f259e332b564" name="ResourceDictionary" isAbstract="false" isLeaf="false" cachedFullName="ResourceDictionary">
+        <elementDefinition Id="222a0712-54ce-4f3b-9abd-9b4c538d5ec9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cacf8301-aad0-4313-b7da-e5902bc5bb8d" name="object" isAbstract="false" isLeaf="false" cachedFullName="object">
+        <elementDefinition Id="7e617bf7-1fa4-4b03-a402-a79d66c936d4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ddf0068b-9d88-4b5f-bd4d-d18d93c4eb62" name="StyleConfiguration" isAbstract="false" isLeaf="false" cachedFullName="StyleConfiguration">
+        <elementDefinition Id="ea480e0e-b959-4d33-9c17-5a45f4fdf388" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="355542b8-18d6-4436-b24d-0b49c16218a8" name="OptionsVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="80652f73-8d79-4d6a-aaaa-6a9f1897df9d" />
+        <ownedAttributesInternal>
+          <property Id="3784d447-b004-4c27-8bdf-1d8edce2cc60" name="SaveLocation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fb5fa0bc-253d-48de-acbc-1ba2800c8dcc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e32d6f55-1d19-48b1-906b-404e0e037e76" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="47655b55-6c17-4acc-af02-8730bedb5d0c" name="cmd_SaveChanges" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f4933474-36da-4d0f-99fa-a9964a66cfff" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0714f9bb-14af-41b2-9e6f-22cf573f3df2" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+          <property Id="29ad6ec0-8d3c-468f-bb50-707a6ecf016a" name="cmd_RevertChanges" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="df515b42-ab1f-46d1-8e20-ea035a1d2d6e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1c0a1c20-bc63-4fdc-9474-35ca674c4fea" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e19e695a-80af-4727-85dd-fdffea6910dc" name="SaveChanges" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="96330f10-1fd0-4453-9816-876967770c69" />
+          </operation>
+          <operation Id="80b3a29d-b55d-46e3-bbd7-221db185fb06" name="RevertChanges" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6f79dff9-03da-4b97-b910-6424b19394b3" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e32d6f55-1d19-48b1-906b-404e0e037e76" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="5307458f-aa38-407d-b346-07e9e8bb1c1e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1c0a1c20-bc63-4fdc-9474-35ca674c4fea" name="ICommand" isAbstract="false" isLeaf="false" cachedFullName="ICommand">
+        <elementDefinition Id="97e39339-9b06-4bad-b861-ede164b44e25" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0714f9bb-14af-41b2-9e6f-22cf573f3df2" name="ICommand" isAbstract="false" isLeaf="false" cachedFullName="ICommand">
+        <elementDefinition Id="97e39339-9b06-4bad-b861-ede164b44e25" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3be9e177-2b63-4f9f-af7a-894c6eeb1292" name="StyleConfigurationVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1495a068-3b92-4758-a7b9-f951ad15b284" />
+        <ownedAttributesInternal>
+          <property Id="5d1a2d8c-d306-42db-beb5-ca1b6c82183c" name="SavedStyleConfigs" isLeaf="false" isStatic="false" isReadOnly="true" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d93ce27e-81b1-4c36-bb22-ad02f76148bf" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="475e88c4-0881-417c-a827-89ad9c83f230" LastKnownName="ObservableCollection&lt;StyleConfiguration&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="a0bd268e-b05b-444f-a45e-a11f79204131" name="cmd_SaveChanges" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0b29d751-4cd9-4735-82b9-74a92a96ed8c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1c0a1c20-bc63-4fdc-9474-35ca674c4fea" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+          <property Id="90bd62ca-fb80-4ea2-b839-dadc65420f59" name="cmd_RevertChanges" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="959a6c5c-19ea-44bc-b437-660fc8e30bea" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1c0a1c20-bc63-4fdc-9474-35ca674c4fea" LastKnownName="ICommand" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ab7c8be1-d19b-4f8d-99c6-4174d9d05e39" name="SaveChanges" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="84f24b2d-d199-4792-a32e-57c9b22792b1" />
+          </operation>
+          <operation Id="56dac309-b229-4d94-850b-61c5fb30fc00" name="RevertChanges" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4bc53c1-8d23-4e36-9127-3fe77fa3d947" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="475e88c4-0881-417c-a827-89ad9c83f230" name="ObservableCollection&lt;StyleConfiguration&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;StyleConfiguration&gt;">
+        <elementDefinition Id="a0675a26-d42a-4076-ac72-b91032216e1d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ead9b83e-fd7e-4cb2-9ad6-a7edee28d617" name="StyleConfiguration" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a3d07f38-954a-4d91-9cee-fda295f9e7fd" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="dfd1bfa0-2bf6-47b2-87e0-d996b8dc666e" name="DarkSengModeling">
+    <elementDefinition Id="58f57591-5628-4b18-9c30-b4dbf927ef03" />
+  </package>
+</logicalClassDesignerModel>

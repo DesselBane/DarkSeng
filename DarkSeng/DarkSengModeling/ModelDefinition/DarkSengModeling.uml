@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="58f57591-5628-4b18-9c30-b4dbf927ef03"
+  name="DarkSengModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="eb690cf8-9e50-43f1-9246-8c9b0df4eb79">
+      <body>Describes the GetStyles() method</body>
+    </comment>
+    <comment
+      Id="9bce6bce-7f43-443f-98e7-2d015c7a69bf">
+      <body>Describes the Save StyleConfig Method</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="f53fe8b9-c9af-474b-bd24-7cfc7cfb4acf"
+        name="StyleController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="7442eb8c-2759-412a-894e-a7495d443b9b"
+            name="Get Styles()"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bd380ae3-75bf-4e99-a131-29b5b92fb529"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="df39e114-d6fb-4619-ba52-690d6a2b43b9"
+                  LastKnownName="Look up saved style"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="df39e114-d6fb-4619-ba52-690d6a2b43b9"
+            name="Look up saved style"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b4304c48-2774-445f-927e-ff105d96ed86"
+                guard="Saved style available"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="e537a187-8770-49d0-a841-4a5f502c08aa"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="91795207-0396-4e7a-b68c-c2ae19266067"
+            name="Load Saved Style"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0f6cf897-8909-45bf-a4e9-7f3705cf0171"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6e4ee4f2-5166-40c2-8c91-ffa76aa0534e"
+                  LastKnownName="Return Style"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c44f416f-b3dd-4844-99a3-ce5395062d39"
+            name="Create default Style"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8725cf5b-ddcd-4724-b7ec-213d3bb37a21"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6e4ee4f2-5166-40c2-8c91-ffa76aa0534e"
+                  LastKnownName="Return Style"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="e537a187-8770-49d0-a841-4a5f502c08aa"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b747e154-9fbb-43d4-bdeb-e49af44f10cf"
+                guard="Yes"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="91795207-0396-4e7a-b68c-c2ae19266067"
+                  LastKnownName="Load Saved Style"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="45c8fcc8-3416-415f-a5d7-3005e4fbf24b"
+                guard="No"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c44f416f-b3dd-4844-99a3-ce5395062d39"
+                  LastKnownName="Create default Style"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="6e4ee4f2-5166-40c2-8c91-ffa76aa0534e"
+            name="Return Style"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d61d0251-acc1-44a7-8667-f17ed92ea3f1"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="decfc10c-7493-45b4-8078-5f31ebec49b1"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e8819d9b-b4c7-41de-8bcb-d9b476fb5eda"
+            name="Save StyleConfig"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c0ffd246-53cd-4f7d-bf24-9ea2d700e6e7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cd10369e-22eb-4013-89b7-c8f5a57f4392"
+                  LastKnownName="Check if name is available"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="984324ea-4daa-4cba-a683-6151316488e1"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="488e7c00-4f79-4ff6-812d-4471c011b5d0"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="1d519fa8-9e72-46ab-aea9-e7cbc99122a5"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="89c24714-5f57-4777-b80b-b589b9341e77"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction
+            Id="cd10369e-22eb-4013-89b7-c8f5a57f4392"
+            name="Check if name is available"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d1ac60c2-32b3-40aa-93aa-d7b255c7ba06"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3ad50644-9b04-4bda-b4fa-6dc9888cadd1"
+                  LastKnownName="Write StyleConfig into file"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3ad50644-9b04-4bda-b4fa-6dc9888cadd1"
+            name="Write StyleConfig into file"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="65b0341f-6f49-4296-bb88-cd1c96b94314"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5fff7bde-19ad-4567-9c7d-e6721ac3f736"
+                  LastKnownName="Determin Save Location"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5fff7bde-19ad-4567-9c7d-e6721ac3f736"
+            name="Determin Save Location"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="84d3e0b1-16e8-4d43-95f5-96b5d2b7fb08"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a0a88d37-6b04-46ed-8365-830a6ec5af02"
+                  LastKnownName="Save the file"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="a0a88d37-6b04-46ed-8365-830a6ec5af02"
+            name="Save the file"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="47a03356-6df7-4bb1-bdc1-7577dfc23809"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="9e754b0e-4383-4c5c-b98c-2145b7a0f088"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="87c3b353-78f5-489f-82e3-c16faed83fdc"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7e2d9aad-8cfc-46da-87be-afb095c8552a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7442eb8c-2759-412a-894e-a7495d443b9b"
+                  LastKnownName="Get Styles()"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="decfc10c-7493-45b4-8078-5f31ebec49b1"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <initialNode
+            Id="40001e6a-411f-4ab6-ad4c-2ef3e735ef42"
+            name="Initial2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b3eef0c8-7583-4633-a477-3ea4aaf66169"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e8819d9b-b4c7-41de-8bcb-d9b476fb5eda"
+                  LastKnownName="Save StyleConfig"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="9e754b0e-4383-4c5c-b98c-2145b7a0f088"
+            name="ActivityFinal2"
+            isLeaf="false" />
+          <objectNode
+            Id="1c16a7d7-13a5-4e09-b540-efa51bdb33c1"
+            name="Style Config to be saved"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="dbda0608-0089-4336-bfdf-d00fb26d2cbf"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="984324ea-4daa-4cba-a683-6151316488e1"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="83420df5-eb5b-4ae4-bc8f-0d9be54dd312"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="3164efcd-e58d-4b9c-bde3-6a2760ec7753"
+            name="Save Path"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="15d028da-3849-48b6-b5f8-5f935ea968d2"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="1d519fa8-9e72-46ab-aea9-e7cbc99122a5"
+                  LastKnownLocation="DarkSengModeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="465e6992-bc60-4c79-be17-422211e4a00d"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a652f8cc-12dd-40c9-9dd6-7b7871548c2c"
+        name="StyleController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="063fbea8-91ae-4711-aa8f-57089cccc8a9"
+            name="OptionsViewModel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7e617bf7-1fa4-4b03-a402-a79d66c936d4"
+                LastKnownName="object"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="17bb0a35-5559-4fc9-854a-54f584b1bedf"
+            name="Current StyleConfig"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ea480e0e-b959-4d33-9c17-5a45f4fdf388"
+                LastKnownName="StyleConfiguration"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="835ed684-453d-49c6-a1ad-f490776f5cde"
+            name="GetStyles"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dc196915-fdd9-4e37-89a7-294514554817"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="222a0712-54ce-4f3b-9abd-9b4c538d5ec9"
+                      LastKnownName="ResourceDictionary"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d4f8054f-09a3-4d66-bdec-85db15033272"
+            name="LoadStyles"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2ea65bf-c701-42c4-9cfe-f0fd0129f735"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="222a0712-54ce-4f3b-9abd-9b4c538d5ec9"
+                      LastKnownName="ResourceDictionary"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ed332ce9-9d1d-4f98-9561-925e6506341d"
+            name="SaveStyleConfig"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31935573-c5cf-49b8-8375-4058ded15c64"
+                  name="StyleConfiguration config"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6256f2bd-11c0-4db6-91c8-f7a2ef0e2aba"
+        name="ResourceDictionary&lt;Style&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="222a0712-54ce-4f3b-9abd-9b4c538d5ec9"
+        name="ResourceDictionary" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7e617bf7-1fa4-4b03-a402-a79d66c936d4"
+        name="object" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ea480e0e-b959-4d33-9c17-5a45f4fdf388"
+        name="StyleConfiguration" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="80652f73-8d79-4d6a-aaaa-6a9f1897df9d"
+        name="OptionsVM"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="fb5fa0bc-253d-48de-acbc-1ba2800c8dcc"
+            name="SaveLocation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5307458f-aa38-407d-b346-07e9e8bb1c1e"
+                LastKnownName="string"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f4933474-36da-4d0f-99fa-a9964a66cfff"
+            name="cmd_SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="97e39339-9b06-4bad-b861-ede164b44e25"
+                LastKnownName="ICommand"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="df515b42-ab1f-46d1-8e20-ea035a1d2d6e"
+            name="cmd_RevertChanges"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="97e39339-9b06-4bad-b861-ede164b44e25"
+                LastKnownName="ICommand"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="96330f10-1fd0-4453-9816-876967770c69"
+            name="SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6f79dff9-03da-4b97-b910-6424b19394b3"
+            name="RevertChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5307458f-aa38-407d-b346-07e9e8bb1c1e"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="761dc0bf-f05b-4544-80db-198c9be88f65"
+        name="RelayCommand" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="97e39339-9b06-4bad-b861-ede164b44e25"
+        name="ICommand" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1495a068-3b92-4758-a7b9-f951ad15b284"
+        name="StyleConfigurationVM"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d93ce27e-81b1-4c36-bb22-ad02f76148bf"
+            name="SavedStyleConfigs"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a0675a26-d42a-4076-ac72-b91032216e1d"
+                LastKnownName="ObservableCollection&lt;StyleConfiguration&gt;"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0b29d751-4cd9-4735-82b9-74a92a96ed8c"
+            name="cmd_SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="97e39339-9b06-4bad-b861-ede164b44e25"
+                LastKnownName="ICommand"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="959a6c5c-19ea-44bc-b437-660fc8e30bea"
+            name="cmd_RevertChanges"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="97e39339-9b06-4bad-b861-ede164b44e25"
+                LastKnownName="ICommand"
+                LastKnownLocation="DarkSengModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="84f24b2d-d199-4792-a32e-57c9b22792b1"
+            name="SaveChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f4bc53c1-8d23-4e36-9127-3fe77fa3d947"
+            name="RevertChanges"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a0675a26-d42a-4076-ac72-b91032216e1d"
+        name="ObservableCollection&lt;StyleConfiguration&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a3d07f38-954a-4d91-9cee-fda295f9e7fd"
+        name="StyleConfiguration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
