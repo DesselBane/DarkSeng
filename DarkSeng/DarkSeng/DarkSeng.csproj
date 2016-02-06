@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DarkSeng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -46,6 +47,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\cmd_base.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Compression\GZip.cs" />
     <Compile Include="Compression\Zip.cs" />
     <Compile Include="Convert\Extensions.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="Serialization\BinarySerializer.cs" />
     <Compile Include="WpfConverter\BoolToVisibilityConverter.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
