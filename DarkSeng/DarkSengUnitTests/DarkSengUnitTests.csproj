@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CryptographyTests.cs" />
+    <Compile Include="IEnumerableExtensionTests.cs" />
     <Compile Include="MathematicTests.cs" />
     <Compile Include="ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
