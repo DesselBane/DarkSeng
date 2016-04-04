@@ -129,5 +129,14 @@ namespace DarkSengUnitTests
             string actual = Parser.ParseCharacters(input, parseChars);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ParseMultipleSpacesWithSingleSpaces()
+        {
+            string input = "that    is   a  string with   multiple   spaces";
+            string expected = "that is a string with multiple spaces";
+            string actual = Parser.ReplaceMultipleSpacesWithSingleSpaces(input);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

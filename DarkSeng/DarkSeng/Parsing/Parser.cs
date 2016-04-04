@@ -109,5 +109,15 @@ namespace DarkSeng.Parsing
 
             return builder.ToString();
         }
+
+        /// <summary>
+        /// Replaces multiple spaces with single spaces from the given string
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string ReplaceMultipleSpacesWithSingleSpaces(string text)
+        {
+            return text.Replace(" ", "<>").Replace("><", "").Replace("<>", " ");
+        }
     }
 }
