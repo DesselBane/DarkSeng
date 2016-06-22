@@ -9,53 +9,53 @@ namespace DarkSeng.Commands
     public class RelayCommand : cmd_base
     {
         #region Vars
-        Action<object> _execute;
-        Func<object, bool> _canExecute;
+        private Action<object> _execute;
+        private Func<object, bool> _canExecute;
         #endregion Vars
 
         #region Constructors
         /// <summary>
         /// Creates a new RelayCommand
         /// </summary>
-        /// <param name="ExecuteDelegate">The delegate that will be called on with the Execute() Method</param>
-        /// <param name="CanExecuteDelegate">The delegate to determine if this command can be executed</param>
-        public RelayCommand(Action<object> ExecuteDelegate, Func<object, bool> CanExecuteDelegate)
+        /// <param name="executeDelegate">The delegate that will be called on with the Execute() Method</param>
+        /// <param name="canExecuteDelegate">The delegate to determine if this command can be executed</param>
+        public RelayCommand(Action<object> executeDelegate, Func<object, bool> canExecuteDelegate)
         {
-            if (ExecuteDelegate == null)
+            if (executeDelegate == null)
                 throw new ArgumentNullException("ExecutionDelegate must not be null.");
 
-            _execute = ExecuteDelegate;
-            _canExecute = CanExecuteDelegate;
+            _execute = executeDelegate;
+            _canExecute = canExecuteDelegate;
         }
 
         /// <summary>
         /// Creates a new RelayCommand
         /// </summary>
-        /// <param name="ExecuteDelegate">The delegate that will be called on with the Execute() Method</param>
-        /// <param name="CanExecuteDelegate">The delegate to determine if this command can be executed</param>
-        public RelayCommand(Action ExecuteDelegate, Func<bool> CanExecuteDelegate) : this((object arg0) => ExecuteDelegate(), (object arg0) => CanExecuteDelegate()) { }
+        /// <param name="executeDelegate">The delegate that will be called on with the Execute() Method</param>
+        /// <param name="canExecuteDelegate">The delegate to determine if this command can be executed</param>
+        public RelayCommand(Action executeDelegate, Func<bool> canExecuteDelegate) : this((object arg0) => executeDelegate(), (object arg0) => canExecuteDelegate()) { }
+        /// <summary>
+        /// Creates a new RelayCommand
+        /// </summary>
+        /// <param name="executeDelegate">The delegate that will be called on with the Execute() Method</param>
+        public RelayCommand(Action executeDelegate) : this(executeDelegate, null as Func<object, bool>) { }
+        /// <summary>
+        /// Creates a new RelayCommand
+        /// </summary>
+        /// <param name="executeDelegate">The delegate that will be called on with the Execute() Method</param>
+        public RelayCommand(Action<object> executeDelegate) : this(executeDelegate, null as Func<object, bool>) { }
+        /// <summary>
+        /// Creates a new RelayCommand
+        /// </summary>
+        /// <param name="executeDelegate">The delegate that will be called on with the Execute() Method</param>
+        /// <param name="canExecuteDelegate">The delegate to determine if this command can be executed</param>
+        public RelayCommand(Action executeDelegate, Func<object, bool> canExecuteDelegate) : this((object arg0) => executeDelegate(), canExecuteDelegate) { }
         /// <summary>
         /// Creates a new RelayCommand
         /// </summary>
         /// <param name="ExecuteDelegate">The delegate that will be called on with the Execute() Method</param>
-        public RelayCommand(Action ExecuteDelegate) : this(ExecuteDelegate, null as Func<object, bool>) { }
-        /// <summary>
-        /// Creates a new RelayCommand
-        /// </summary>
-        /// <param name="ExecuteDelegate">The delegate that will be called on with the Execute() Method</param>
-        public RelayCommand(Action<object> ExecuteDelegate) : this(ExecuteDelegate, null as Func<object, bool>) { }
-        /// <summary>
-        /// Creates a new RelayCommand
-        /// </summary>
-        /// <param name="ExecuteDelegate">The delegate that will be called on with the Execute() Method</param>
-        /// <param name="CanExecuteDelegate">The delegate to determine if this command can be executed</param>
-        public RelayCommand(Action ExecuteDelegate, Func<object, bool> CanExecuteDelegate) : this((object arg0) => ExecuteDelegate(), CanExecuteDelegate) { }
-        /// <summary>
-        /// Creates a new RelayCommand
-        /// </summary>
-        /// <param name="ExecuteDelegate">The delegate that will be called on with the Execute() Method</param>
-        /// <param name="CanExecuteDelegate">The delegate to determine if this command can be executed</param>
-        public RelayCommand(Action<object> ExecutionDelegate, Func<bool> CanExecuteDelegate) : this(ExecutionDelegate, (object arg0) => CanExecuteDelegate()) { }
+        /// <param name="canExecuteDelegate">The delegate to determine if this command can be executed</param>
+        public RelayCommand(Action<object> executionDelegate, Func<bool> canExecuteDelegate) : this(executionDelegate, (object arg0) => canExecuteDelegate()) { }
 
         #endregion Constructors
 
@@ -78,7 +78,7 @@ namespace DarkSeng.Commands
         /// Executes the command with the given parameter
         /// </summary>
         /// <param name="parameter">Some Parameter that might be needed for the command execution</param>
-        public override void Execute(object parameter)
+        protected override void ExecuteImpl(object parameter)
         {
             _execute(parameter);
         }

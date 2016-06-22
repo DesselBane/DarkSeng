@@ -9,40 +9,67 @@ namespace DarkSeng.Commands
 {
     public abstract class cmd_base : ICommand
     {
-        #region Constructors
-
-        #endregion
-
         #region Events
-        public event EventHandler CanExecuteChanged;
 
+        public event EventHandler CanExecuteChanged
+        {
+            add
+            {
+                CommandManager.RequerySuggested += value;
+                Reevaluate += value;
+            }
+            remove
+            {
+                CommandManager.RequerySuggested -= value;
+                Reevaluate -= value;
+            }
+        }
+
+        protected event EventHandler Reevaluate;
+
+        
         protected void OnCanExecuteChanged()
         {
-            var handler = CanExecuteChanged;
-            if (handler != null)
-                handler(this, new EventArgs());
+            EventHandler handler = Reevaluate;
+            handler?.Invoke(this, new EventArgs());
         }
+
         #endregion
 
-        #region Public
+        #region Methods
 
         /// <summary>
         /// Determines if the command can be executed with the given parameter
         /// </summary>
         /// <param name="parameter">Some Parameter that might be needed for the command execution</param>
-        /// <returns>Returns true if command can be executed</returns>
-        public abstract bool CanExecute(object parameter);
+        /// <returns>Returns true if command can be executed. The default is true</returns>
+        public virtual bool CanExecute(object parameter)
+        {
+            return true;
+        }
 
         /// <summary>
         /// Executes the command with the given parameter
         /// </summary>
-        /// <param name="parameter">Some Parameter that might be needed for the command execution</param>
-        public abstract void Execute(object parameter);
+        /// <param name="param">Some Parameter that might be needed for the command execution</param>
+        protected abstract void ExecuteImpl(object param);
+
+        /// <summary>
+        /// Checks if CanExecute returns true. If so executes the command. Otherwise throws an InvalidOperationException
+        /// </summary>
+        /// <param name="parameter"></param>
+        public void Execute(object parameter)
+        {
+            if (!CanExecute(parameter))
+                throw new InvalidOperationException("Cannot Execute Command if CanExecute() returns false");
+
+            ExecuteImpl(parameter);
+        }
 
         /// <summary>
         /// This will fire the CanExecuteChanged Event. This will also trigger the CommandManager to reevaluate this commands CanExecute State.
         /// </summary>
-        public virtual void ReevaluateCanExecute()
+        public virtual void ReevaluatePermissions()
         {
             OnCanExecuteChanged();
         }
