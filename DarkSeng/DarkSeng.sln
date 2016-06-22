@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkSeng", "DarkSeng\DarkSeng.csproj", "{0DC69564-7333-4A60-B366-4E15FC891ABD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkSengUnitTests", "DarkSengUnitTests\DarkSengUnitTests.csproj", "{A4DBA884-6E83-4B50-817E-CCC67DC4B2F6}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DarkSengModeling", "DarkSengModeling\DarkSengModeling.modelproj", "{B8E3C582-1A50-4CD5-999D-00B4491671FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkSeng.ViewModel", "DarkSeng.ViewModel\DarkSeng.ViewModel.csproj", "{5BC1EE8E-C5F2-4D3A-B4D5-FF484DB0EF51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkSeng.Wpf", "DarkSeng.Wpf\DarkSeng.Wpf.csproj", "{5092226C-CC7C-440B-9A29-2F720F76D6BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{B8E3C582-1A50-4CD5-999D-00B4491671FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8E3C582-1A50-4CD5-999D-00B4491671FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8E3C582-1A50-4CD5-999D-00B4491671FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC1EE8E-C5F2-4D3A-B4D5-FF484DB0EF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC1EE8E-C5F2-4D3A-B4D5-FF484DB0EF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC1EE8E-C5F2-4D3A-B4D5-FF484DB0EF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC1EE8E-C5F2-4D3A-B4D5-FF484DB0EF51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5092226C-CC7C-440B-9A29-2F720F76D6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5092226C-CC7C-440B-9A29-2F720F76D6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5092226C-CC7C-440B-9A29-2F720F76D6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5092226C-CC7C-440B-9A29-2F720F76D6BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
