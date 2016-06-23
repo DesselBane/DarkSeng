@@ -7,46 +7,14 @@
       </Interface>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="e995e7ca-dd7a-4870-b2fe-40e5f7d418c1" name="INotifyDataErrorInfo" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="f433de1d-d4e2-44c3-9b65-45c15383d67c" />
-        <ownedOperations>
-          <operation Id="9b08372d-0b0a-4774-90ec-eb4741e7eebd" name="GetErrors" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="8bccb422-2c0f-4618-b5af-6692a99dd61a" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="7c5eb221-3d54-4ff7-bc56-117ed56e0a46" name="string propertyName" direction="In" isUnique="false">
-                  <elementDefinition Id="601a5b92-067e-4bbd-b260-94d63dcfffd4" />
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="64ce66ff-6426-4dae-a4eb-5d14e2ada8c1" direction="Return" isUnique="false">
-                  <elementDefinition Id="bfb191a4-261e-4985-a6c9-059333ab85e3" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="0fbcd362-c286-4999-aa5e-8779440356e8" LastKnownName="IEnumerable" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="849f2756-6cd5-4e49-8b02-4bd4b2588305" name="HasErrors" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="f45a4d5b-d47c-4f62-95a6-2ee7c2c2ce24" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="2193e2ed-1b74-48c9-b366-e7284d49bef2" direction="Return" isUnique="false">
-                  <elementDefinition Id="7b5a8e21-d101-4886-8386-f0321abfcc64" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="cb33b691-2533-4a01-9d5f-594750666368" LastKnownName="bool" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperations>
-      </Interface>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <Interface Id="bc613455-f112-4de5-ac76-9b106706122a" name="IDisposable" isAbstract="false" isLeaf="false">
         <elementDefinition Id="879db3cc-0c9a-4a26-aae5-6d126fbed8b5" />
+        <generalsInternal>
+          <generalization Id="02bea314-be9b-4528-888e-ee9de2a8773a" isSubstitutable="false">
+            <interfaceMoniker Id="df534e1d-aaf2-4443-998b-f000c13d503d" LastKnownName="IValidatable" />
+            <elementDefinition Id="b6e30fd1-dcd7-4d95-90c6-eba6f4fbe0ec" />
+          </generalization>
+        </generalsInternal>
         <ownedOperations>
           <operation Id="d1cb1d24-d9dc-4244-9039-806f8cd6d1a4" name="Dispose" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ee1e79f3-6f15-4e3e-bf05-82600f6475ac" />
@@ -61,10 +29,6 @@
           <generalization Id="50bd27e6-86d2-40dd-bb1f-5f14449fe055" isSubstitutable="false">
             <interfaceMoniker Id="bc613455-f112-4de5-ac76-9b106706122a" LastKnownName="IDisposable" />
             <elementDefinition Id="a5618532-a7ff-4955-b58a-16a19ac46274" />
-          </generalization>
-          <generalization Id="538b605f-b808-4e25-b3e0-ba77814cec6e" isSubstitutable="false">
-            <interfaceMoniker Id="e995e7ca-dd7a-4870-b2fe-40e5f7d418c1" LastKnownName="INotifyDataErrorInfo" />
-            <elementDefinition Id="79a683a1-749f-485b-a3f3-67017952bd71" />
           </generalization>
           <generalization Id="1d8b7c4d-dcb0-4f80-9739-4d075d7e8133" isSubstitutable="false">
             <interfaceMoniker Id="08272973-683b-4f53-8a5d-896c5a7deb52" LastKnownName="INotifyPropertyChanged" />
@@ -435,6 +399,16 @@
         <elementDefinition Id="08686cb5-15ee-4067-ae22-e598208b8b01" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="df534e1d-aaf2-4443-998b-f000c13d503d" name="IValidatable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c0d425d6-69c6-43fc-83a6-272242a08091" />
+        <ownedOperations>
+          <operation Id="38f44689-e81c-411f-acc5-2c13e6e0191f" name="Defined in Validation" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="223666ac-76d8-4d01-8f51-6dd3b89ce044" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="ec4c1e11-560c-4bec-95aa-bf17e4c21cb7" name="DarkSengModeling">
     <elementDefinition Id="58f57591-5628-4b18-9c30-b4dbf927ef03" />

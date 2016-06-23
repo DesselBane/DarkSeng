@@ -731,6 +731,16 @@
         name="IDisposable"
         isAbstract="false"
         isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="b6e30fd1-dcd7-4d95-90c6-eba6f4fbe0ec"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="c0d425d6-69c6-43fc-83a6-272242a08091"
+              LastKnownName="IValidatable"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </generalization>
+        </generalsInternal>
         <ownedOperations>
           <operation
             Id="ee1e79f3-6f15-4e3e-bf05-82600f6475ac"
@@ -1326,6 +1336,267 @@
       <undefinedType
         Id="08686cb5-15ee-4067-ae22-e598208b8b01"
         name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="20326e12-a893-4731-8f85-2253135c3fc3"
+        name="IValidationRule"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="58cc9f7d-3817-49ba-a1ca-9e6378216044"
+            name="Validate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0d6738f1-488f-4005-87e2-03510a649f03"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6fa317a5-f88a-419b-97bb-b3a08c7ac236"
+        name="IValidationResult"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="304675d4-72a9-459d-a943-28fc3bc28fb9"
+        name="INotifyDataErrorInfo"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="439ec9fe-3a26-46f4-8e92-1d1e9ee67915"
+            name="GetErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="38301625-c34e-412d-954f-48556fe19851"
+                  name="string propertyName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06bb2bc4-0212-4ab9-9afb-8cc18ed984c3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="8f221424-d40b-4e65-99f7-75cc4e3584bb"
+                      LastKnownName="IEnumerable"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="097969b6-701b-40b1-b799-55e5bdeb21ad"
+            name="HasErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b4709b84-f467-4781-9dba-9b0b4f31404a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="901af44e-465a-407b-be82-4e5a1fb5c5f0"
+        name="IValidatable"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="6c21b040-e4e0-4690-bb02-81966aedc300"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="304675d4-72a9-459d-a943-28fc3bc28fb9"
+              LastKnownName="INotifyDataErrorInfo"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation
+            Id="29853034-9d47-4df7-9a9c-75312ed425b6"
+            name="Validate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53e4aa62-73e5-4029-9ac6-c28adf71e051"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d4285712-a40a-4cbc-aabe-86cdc96dcffb"
+            name="Validate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2147f799-ed9d-4e8f-9c81-0b601683f614"
+                  name="string propName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="afc026e9-137a-45b7-bc64-e131f6ce63fe"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c0d425d6-69c6-43fc-83a6-272242a08091"
+        name="IValidatable"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="223666ac-76d8-4d01-8f51-6dd3b89ce044"
+            name="Defined in Validation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="81490244-c5cc-4a79-9ffd-434b11fc930b"
+        name="RelayValidationRule"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a81cf485-e36d-441f-8cda-741b5803a61e">
+            <interfaceMoniker
+              Id="20326e12-a893-4731-8f85-2253135c3fc3"
+              LastKnownName="IValidationRule"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="256d0f68-219f-4c98-ac70-970ee2c244ed"
+            name="Validate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7be9bc26-a409-4636-8621-237ff1aca41b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3d139ce4-e455-44bb-8378-82ac427d72d4"
+            name="RelayValidationRule"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c9b8dcb-846c-4005-88ae-38fbe4b351bd"
+                  name="Func&lt;bool&gt; validationDelegate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

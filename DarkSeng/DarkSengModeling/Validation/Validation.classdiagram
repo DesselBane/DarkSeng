@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="b5b85382-5fab-4e37-b3f4-0009d12ef539" name="Validation" linkedPackageId="c7cb7d52-9d15-4730-a846-7e3e592ce4b5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7659fa3c-8c4c-4586-904c-2ff12376cc96" name="IValidationRule" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="20326e12-a893-4731-8f85-2253135c3fc3" />
+        <ownedOperations>
+          <operation Id="26926327-cb6a-41bb-97f1-492ac0cb99bf" name="Validate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="58cc9f7d-3817-49ba-a1ca-9e6378216044" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="082c115a-c9f6-47e1-837c-c4ae5105a8cf" direction="Return" isUnique="false">
+                  <elementDefinition Id="0d6738f1-488f-4005-87e2-03510a649f03" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0d1fc3bf-10a6-4824-be94-671136450d35" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="0d1fc3bf-10a6-4824-be94-671136450d35" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="08686cb5-15ee-4067-ae22-e598208b8b01" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="33b665c7-d63e-4052-a64a-9fa3997d945a" name="IEnumerable" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable">
+        <elementDefinition Id="8f221424-d40b-4e65-99f7-75cc4e3584bb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f9c50ebe-d4dc-4f3d-8507-920584390792" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="08686cb5-15ee-4067-ae22-e598208b8b01" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="92337ab5-6b70-4e83-92f7-4ffe266a4080" name="INotifyDataErrorInfo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="304675d4-72a9-459d-a943-28fc3bc28fb9" />
+        <ownedOperations>
+          <operation Id="1c588e55-cd0f-43d4-9f09-265bb6855b60" name="GetErrors" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="439ec9fe-3a26-46f4-8e92-1d1e9ee67915" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f260f75b-3cf4-4289-a5f1-09ea39ec2cde" name="string propertyName" direction="In" isUnique="false">
+                  <elementDefinition Id="38301625-c34e-412d-954f-48556fe19851" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="22a18ce0-ce67-48cb-bb87-8e28c8a1cbf3" direction="Return" isUnique="false">
+                  <elementDefinition Id="06bb2bc4-0212-4ab9-9afb-8cc18ed984c3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="33b665c7-d63e-4052-a64a-9fa3997d945a" LastKnownName="IEnumerable" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ca99601c-5acd-4887-b4f8-7a5a6dd004e7" name="HasErrors" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="097969b6-701b-40b1-b799-55e5bdeb21ad" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="69269d41-04b5-4ec1-9a5c-670a88e5b63b" direction="Return" isUnique="false">
+                  <elementDefinition Id="b4709b84-f467-4781-9dba-9b0b4f31404a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f9c50ebe-d4dc-4f3d-8507-920584390792" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c43a4e15-f5b2-4d6c-be7d-fe1d49ec0033" name="IValidatable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="901af44e-465a-407b-be82-4e5a1fb5c5f0" />
+        <generalsInternal>
+          <generalization Id="b4a10047-2227-4dca-90d7-bbc2c728dbdb" isSubstitutable="false">
+            <interfaceMoniker Id="92337ab5-6b70-4e83-92f7-4ffe266a4080" LastKnownName="INotifyDataErrorInfo" />
+            <elementDefinition Id="6c21b040-e4e0-4690-bb02-81966aedc300" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation Id="f4c0ec78-9ca1-41f8-9bcc-a7bb8fea07b5" name="Validate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="29853034-9d47-4df7-9a9c-75312ed425b6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="903ee43a-b759-4711-8cdf-ceef6331f828" direction="Return" isUnique="false">
+                  <elementDefinition Id="53e4aa62-73e5-4029-9ac6-c28adf71e051" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0d1fc3bf-10a6-4824-be94-671136450d35" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1548011c-9423-47d9-a5a3-bb0e879f135f" name="Validate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d4285712-a40a-4cbc-aabe-86cdc96dcffb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="520aa253-1e19-49e2-a815-480f7aa57d14" name="string propName" direction="In" isUnique="false">
+                  <elementDefinition Id="2147f799-ed9d-4e8f-9c81-0b601683f614" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="87280037-a791-42b4-8720-9c3ac2a73682" direction="Return" isUnique="false">
+                  <elementDefinition Id="afc026e9-137a-45b7-bc64-e131f6ce63fe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0d1fc3bf-10a6-4824-be94-671136450d35" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b85e2ce2-9810-4a39-9a46-fbdc2588d827" name="RelayValidationRule" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="81490244-c5cc-4a79-9ffd-434b11fc930b" />
+        <suppliersInternal>
+          <interfaceRealization Id="6d60471a-7fab-4303-9074-537ba380fb70">
+            <interfaceMoniker Id="7659fa3c-8c4c-4586-904c-2ff12376cc96" LastKnownName="IValidationRule" />
+            <elementDefinition Id="a81cf485-e36d-441f-8cda-741b5803a61e" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="878a99df-748f-46c6-bf4b-bd048caa8bd8" name="Validate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="256d0f68-219f-4c98-ac70-970ee2c244ed" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cdc02664-77c8-4854-956f-0d86dbd1d67d" direction="Return" isUnique="false">
+                  <elementDefinition Id="7be9bc26-a409-4636-8621-237ff1aca41b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0d1fc3bf-10a6-4824-be94-671136450d35" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="79fbd724-bc2a-4322-a89c-255e11444a70" name="RelayValidationRule" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3d139ce4-e455-44bb-8378-82ac427d72d4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="58a881cf-9018-4a3a-a295-ce93b8e9fd62" name="Func&lt;bool&gt; validationDelegate" direction="In" isUnique="false">
+                  <elementDefinition Id="0c9b8dcb-846c-4005-88ae-38fbe4b351bd" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c7cb7d52-9d15-4730-a846-7e3e592ce4b5" name="DarkSengModeling">
+    <elementDefinition Id="58f57591-5628-4b18-9c30-b4dbf927ef03" />
+  </package>
+</logicalClassDesignerModel>

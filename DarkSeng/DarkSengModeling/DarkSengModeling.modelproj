@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>General\ViewModel.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Validation\Validation.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Validation\Validation.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Validation\Validation.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Wpf\Styling\Requirements Styler.txt">
       <SubType>Content</SubType>
     </Content>
@@ -51,6 +58,7 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="General" />
+    <Folder Include="Validation" />
     <Folder Include="Wpf" />
     <Folder Include="Wpf\Styling" />
   </ItemGroup>
