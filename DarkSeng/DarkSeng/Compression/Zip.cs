@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO.Compression; //needs reference to System.IO.Compression.FileSystem
+﻿using System.IO.Compression; //needs reference to System.IO.Compression.FileSystem
 
 namespace DarkSeng.Compression
 {

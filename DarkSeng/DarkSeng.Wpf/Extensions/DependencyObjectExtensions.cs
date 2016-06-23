@@ -1,8 +1,7 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Media;
+﻿using System.Windows.Media;
 
-namespace DarkSeng.Extensions
+// ReSharper disable once CheckNamespace
+namespace System.Windows
 {
     public static class DependencyObjectExtensions
     {
@@ -16,7 +15,7 @@ namespace DarkSeng.Extensions
             Type type = typeof(T);
             if (element == null) return null;
             DependencyObject parent = VisualTreeHelper.GetParent(element);
-            if (parent == null && ((FrameworkElement)element).Parent is DependencyObject) parent = ((FrameworkElement)element).Parent;
+            if (parent == null && ((FrameworkElement)element).Parent != null) parent = ((FrameworkElement)element).Parent;
             if (parent == null) return null;
             else if (parent.GetType() == type || parent.GetType().IsSubclassOf(type)) return parent as T;
             return GetParentOfType<T>(parent);

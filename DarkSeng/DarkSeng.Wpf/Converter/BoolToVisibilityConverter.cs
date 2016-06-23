@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace DarkSeng.WpfConverter
+namespace DarkSeng.Wpf.Converter
 {
     public class BoolToVisibilityConverter : IValueConverter
     {

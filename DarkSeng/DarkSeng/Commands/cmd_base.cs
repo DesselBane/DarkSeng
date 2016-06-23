@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DarkSeng.Commands
@@ -11,26 +7,11 @@ namespace DarkSeng.Commands
     {
         #region Events
 
-        public event EventHandler CanExecuteChanged
-        {
-            add
-            {
-                CommandManager.RequerySuggested += value;
-                Reevaluate += value;
-            }
-            remove
-            {
-                CommandManager.RequerySuggested -= value;
-                Reevaluate -= value;
-            }
-        }
+        public event EventHandler CanExecuteChanged;
 
-        protected event EventHandler Reevaluate;
-
-        
         protected void OnCanExecuteChanged()
         {
-            EventHandler handler = Reevaluate;
+            EventHandler handler = CanExecuteChanged;
             handler?.Invoke(this, new EventArgs());
         }
 

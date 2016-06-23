@@ -1,8 +1,7 @@
-﻿using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media;
+﻿using System.Windows.Media;
 
-namespace DarkSeng.Extensions
+// ReSharper disable once CheckNamespace
+namespace System.Windows.Input
 {
     public static class MouseButtonEventArgsExtention
     {
