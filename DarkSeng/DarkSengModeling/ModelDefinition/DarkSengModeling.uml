@@ -13,20 +13,6 @@
       <body>Describes the Save StyleConfig Method</body>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances
-      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
-      <profileInstance
-        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
-        name="StandardProfileL2" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances
-      Id="29349502-908c-4fda-9054-c48619c59ed0">
-      <profileInstance
-        Id="532ea607-fb19-44b8-8502-3351b05452be"
-        name="StandardProfileL3" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <activity
@@ -666,6 +652,680 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4db765d6-7681-461d-9563-d36efc84144e"
+        name="INotifyPropertyChanged"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f433de1d-d4e2-44c3-9b65-45c15383d67c"
+        name="INotifyDataErrorInfo"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="8bccb422-2c0f-4618-b5af-6692a99dd61a"
+            name="GetErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="601a5b92-067e-4bbd-b260-94d63dcfffd4"
+                  name="string propertyName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bfb191a4-261e-4985-a6c9-059333ab85e3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="8f221424-d40b-4e65-99f7-75cc4e3584bb"
+                      LastKnownName="IEnumerable"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f45a4d5b-d47c-4f62-95a6-2ee7c2c2ce24"
+            name="HasErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b5a8e21-d101-4886-8386-f0321abfcc64"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="879db3cc-0c9a-4a26-aae5-6d126fbed8b5"
+        name="IDisposable"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="ee1e79f3-6f15-4e3e-bf05-82600f6475ac"
+            name="Dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2ee46792-bea1-4254-b1d0-e2827db0eaf0"
+        name="IBaseViewModel"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="a5618532-a7ff-4955-b58a-16a19ac46274"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="879db3cc-0c9a-4a26-aae5-6d126fbed8b5"
+              LastKnownName="IDisposable"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </generalization>
+          <generalization
+            Id="79a683a1-749f-485b-a3f3-67017952bd71"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="f433de1d-d4e2-44c3-9b65-45c15383d67c"
+              LastKnownName="INotifyDataErrorInfo"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </generalization>
+          <generalization
+            Id="b1225dfc-be9a-47c6-bb35-2b04ab1f4e71"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="4db765d6-7681-461d-9563-d36efc84144e"
+              LastKnownName="INotifyPropertyChanged"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="2a02bcb4-79c2-4e5e-8b6c-016f99282eaa"
+        name="BoxResult"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="d67d6217-ede9-42ca-91d2-0b7be985262f"
+            name="Ok" />
+          <enumerationLiteral
+            Id="18af2385-ccdb-42cc-908d-36f97cc90c0c"
+            name="Yes" />
+          <enumerationLiteral
+            Id="33c8b005-49e3-4913-9321-42a18c1adca6"
+            name="No" />
+          <enumerationLiteral
+            Id="6396b09c-96d8-44e4-b134-82efdc77c212"
+            name="Cancel" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="95c521e6-698f-4d28-98ab-a02b7eb188f4"
+        name="BoxButtons"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="48bc7c6a-8f5b-495c-a9fb-cf8a64215380"
+            name="Yes_No" />
+          <enumerationLiteral
+            Id="a36b8804-d2e0-41b7-8627-0a6da655ef4e"
+            name="Ok" />
+          <enumerationLiteral
+            Id="20b75c29-c1ee-4c0a-aa12-9ab5e7837231"
+            name="Ok_Cancel" />
+          <enumerationLiteral
+            Id="39a0e2df-17d1-4b6d-b5db-7de16514a0ab"
+            name="Yes_No_Cancel" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="1ce64583-05ac-4e92-be7b-791969d9d9b3"
+        name="BoxIcon"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="8dd25329-c73e-43b0-a557-8fb6c363d45c"
+            name="None" />
+          <enumerationLiteral
+            Id="74526d1c-d89e-4c90-a6c4-ca798f2a6b02"
+            name="Warning" />
+          <enumerationLiteral
+            Id="9527711c-a342-472a-b0bd-fb14fc794141"
+            name="Error" />
+          <enumerationLiteral
+            Id="582f0d29-8408-4a2e-9eeb-0f5958500b89"
+            name="Question" />
+          <enumerationLiteral
+            Id="3a953dca-a98b-44d0-85a3-056dd7f223c3"
+            name="Information" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="dce7aa9b-79b9-4b9a-9a5f-666afe760fbf"
+        name="IPasswordService"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="09c76143-1092-4912-aaf1-fd47afadb576"
+            name="GetPassword"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9cf79efb-c15a-4f00-9c87-1715ae01db39"
+                  name="int id"
+                  direction="In"
+                  isUnique="false">
+                  <defaultValue>
+                    <literalString
+                      Id="eec12296-963c-4f72-b1e9-0691d10b1471"
+                      name="DefaultValue"
+                      value="0" />
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3f2ebfab-1887-4f4d-ba22-47100b98b5a6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5307458f-aa38-407d-b346-07e9e8bb1c1e"
+                      LastKnownName="string"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6a96318b-c8de-409e-ab88-05768a3a091e"
+        name="IBasicContentHost"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="86383d00-325d-44f6-85be-0e19767ff0e4"
+            name="ShowModelHost"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a79cd3c8-0f45-497b-897f-3a88be704421"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6a96318b-c8de-409e-ab88-05768a3a091e"
+                      LastKnownName="IBasicContentHost"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db2d7219-3675-4352-a748-c2fe31ede0fd"
+                  name="object content"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7ab90bd0-31a6-47e4-b142-78be8622c676"
+            name="ShowHost"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1994cb98-2a67-482b-9dd7-5af1aa8a079c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6a96318b-c8de-409e-ab88-05768a3a091e"
+                      LastKnownName="IBasicContentHost"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5b008b0-f6e7-42e5-a446-cb82d629b511"
+                  name="object content"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="542456ab-6a66-4e41-bd16-64ddf8ba6bf7"
+            name="CloseHost"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="73dd1248-a9ef-4fc8-b393-651db28115c8"
+            name="ShowError"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78610abb-8842-4f84-9d1e-355602428955"
+                  name="string errorMsg"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d4d422e2-a4da-4ca8-92ba-6e6043924657"
+                  name="string errorTitle"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c5644531-6ec5-4104-ad03-85ca72279466"
+            name="ShowMessageBox"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="238805f5-9ba0-468f-8efb-2cffc4d0bee0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="2a02bcb4-79c2-4e5e-8b6c-016f99282eaa"
+                      LastKnownName="BoxResult"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c775f0c8-8cf7-4354-b482-52320bd679bf"
+                  name="string errorKey"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c5604b4-8564-46bd-866a-c2644b1d77a7"
+                  name="string titleKey"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ec38d6ae-e5e6-4698-a7a6-cb417e23c025"
+                  name="BoxButtons buttons"
+                  direction="In"
+                  isUnique="false">
+                  <defaultValue>
+                    <literalString
+                      Id="b4c81283-515f-4c83-b6a7-8adba1041000"
+                      name="DefaultValue"
+                      value="BoxButtons.Ok" />
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="742576e3-50fe-4c62-b480-46f9f3fee2ad"
+                  name="BoxIcon icon"
+                  direction="In"
+                  isUnique="false">
+                  <defaultValue>
+                    <literalString
+                      Id="e05e1d51-8abc-4821-9466-859968bdc974"
+                      name="DefaultValue"
+                      value="BoxIcon.None" />
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="352791bc-4e2c-4f9b-963e-8becf4de2eaa"
+        name="IAppContentHost"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="4cdc37ca-b8ef-4377-bdc0-435e0dbc7396"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="6a96318b-c8de-409e-ab88-05768a3a091e"
+              LastKnownName="IBasicContentHost"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation
+            Id="d06343a8-0dff-4be2-a5d9-121797178c84"
+            name="Restart"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="19c17edf-748e-440f-b3cb-4a3ec37b55ee"
+            name="Shutdown"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ba9cabc-70a6-416f-bdcb-37ce5fa39814"
+                  name="int exitCode"
+                  direction="In"
+                  isUnique="false">
+                  <defaultValue>
+                    <literalString
+                      Id="90726121-c3c9-4c53-89a6-e540091d7686"
+                      name="DefaultValue"
+                      value="0" />
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7875e066-1316-4fa7-9c35-275298d36e2f"
+        name="BaseViewModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="c388db17-add2-4b58-b6cb-6987342f0627">
+            <interfaceMoniker
+              Id="2ee46792-bea1-4254-b1d0-e2827db0eaf0"
+              LastKnownName="IBaseViewModel"
+              LastKnownLocation="DarkSengModeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="16b14908-9ddc-484e-a219-8be9905484e2"
+            name="Dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4eb9c7a6-50be-467d-8923-e1c0062bcc23"
+            name="FirePropertyChanged"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c57cc3e4-b064-4956-9ec8-3a5f4421e32a"
+                  name="string propName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2a4b8933-240f-46b6-9a5b-26f0abb66a2f"
+            name="GetErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="850ac3fd-3f39-4de4-ad51-7d1b18198eb6"
+                  name="string propertyName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="552b7b9e-4189-4a38-a2b2-01efc5415702"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="8f221424-d40b-4e65-99f7-75cc4e3584bb"
+                      LastKnownName="IEnumerable"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="46d0a755-92d2-4247-a5fa-207868de3c0b"
+            name="HasErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="096b3b1e-d0af-4fd6-b442-d6ae4042a75e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+                      LastKnownName="bool"
+                      LastKnownLocation="DarkSengModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0441a45d-76dd-4b4f-9584-fd5660663833"
+            name="FireErrorsChanged"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="39b2aa6a-0d10-463a-93f3-4f1dc4065a25"
+                  name="string propName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a6bd1011-9024-40a2-bf53-52737960e2f8"
+            name="AddError"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b40f2987-3d08-437c-9820-9374129e21c0"
+                  name="string propName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="77fa1ba6-84c2-46d8-bbc4-d6e05a4651aa"
+                  name="string errorMsg"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf86d842-c729-4f43-9e7e-edc771f8746e"
+                  name="string errorMsgKey"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="915ef044-290e-4577-ba54-c2667d0f7e0a"
+            name="RemoveError"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="94e30bbf-d94f-4916-84e7-360da8c0f6cf"
+                  name="string propName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="02e04032-9217-4f7b-9b20-49d24af742e1"
+            name="RemoveError"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64126285-f7b6-46da-a88c-b6a66b321514"
+                  name="string propName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="322b2cd3-5fc2-4a26-8774-42e88acbcf86"
+                  name="string errorMsgKey"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8f221424-d40b-4e65-99f7-75cc4e3584bb"
+        name="IEnumerable" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="08686cb5-15ee-4067-ae22-e598208b8b01"
+        name="bool" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
