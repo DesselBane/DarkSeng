@@ -40,6 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\Enums\BoxButtons.cs" />
+    <Compile Include="General\Enums\BoxIcon.cs" />
+    <Compile Include="General\Enums\BoxResult.cs" />
+    <Compile Include="General\Interfaces\IAppContentHost.cs" />
+    <Compile Include="General\Interfaces\IBasicContentHost.cs" />
+    <Compile Include="General\Interfaces\IBaseViewModel.cs" />
+    <Compile Include="General\Interfaces\IPasswordService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
