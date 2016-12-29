@@ -1462,7 +1462,7 @@
         <ownedOperations>
           <operation
             Id="29853034-9d47-4df7-9a9c-75312ed425b6"
-            name="Validate"
+            name="ValidateAll"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"

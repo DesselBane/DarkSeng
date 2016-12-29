@@ -84,7 +84,7 @@
           </generalization>
         </generalsInternal>
         <ownedOperations>
-          <operation Id="f4c0ec78-9ca1-41f8-9bcc-a7bb8fea07b5" name="Validate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+          <operation Id="f4c0ec78-9ca1-41f8-9bcc-a7bb8fea07b5" name="ValidateAll" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="29853034-9d47-4df7-9a9c-75312ed425b6" />
             <ownedParameters>
               <operationHasOwnedParameters>
