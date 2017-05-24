@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PackageId>DarkSengCore</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>DarkPhantom, Seng</Authors>
+    <Description>Random Utilities</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First Test Release</PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) DarkPhantom, Seng. All rights reserved.</Copyright>
+    <PackageTags>Utility</PackageTags>
+  </PropertyGroup>
+
+</Project>
